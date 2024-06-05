@@ -15,6 +15,9 @@ app.use(cookieParser());
 import taskRoute from "./routes/task.route.js"
 
 // route declaration
+app.get('/', (_, resp) => {
+    resp.send('Hello Node.js');
+});
 
 app.use("/api/v1/task", taskRoute)
 
